@@ -1,880 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasun Harshana Premalal - Professional Profile</title>
+    <title>Kasun Harshana - Junior Graphic Designer CV</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #000;
-            color: #fff;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animated background particles */
-        .background-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #fff;
+        /* Custom styles for A4-like aspect ratio and font */
+        html { font-family: 'Inter', sans-serif; }
+        
+        /* Custom CSS for Circular Progress Bars */
+        .progress-circle {
+            position: relative;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-            opacity: 0.3;
+            background: conic-gradient(currentColor 0% 0%, #e0e0e0 0% 100%);
+            transition: background 1.5s ease-out;
         }
 
-        .particle:nth-child(1) {
-            left: 10%;
-            top: 20%;
-            animation-delay: 0s;
-        }
-
-        .particle:nth-child(2) {
-            left: 20%;
-            top: 80%;
-            animation-delay: 1s;
-        }
-
-        .particle:nth-child(3) {
-            left: 30%;
-            top: 40%;
-            animation-delay: 2s;
-        }
-
-        .particle:nth-child(4) {
-            left: 40%;
-            top: 60%;
-            animation-delay: 3s;
-        }
-
-        .particle:nth-child(5) {
-            left: 50%;
-            top: 30%;
-            animation-delay: 4s;
-        }
-
-        .particle:nth-child(6) {
-            left: 60%;
-            top: 70%;
-            animation-delay: 5s;
-        }
-
-        .particle:nth-child(7) {
-            left: 70%;
-            top: 20%;
-            animation-delay: 0.5s;
-        }
-
-        .particle:nth-child(8) {
-            left: 80%;
-            top: 90%;
-            animation-delay: 1.5s;
-        }
-
-        .particle:nth-child(9) {
-            left: 90%;
-            top: 50%;
-            animation-delay: 2.5s;
-        }
-
-        .particle:nth-child(10) {
-            left: 15%;
-            top: 60%;
-            animation-delay: 3.5s;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-30px) rotate(180deg);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            padding: 80px 0;
-            background: linear-gradient(135deg, #000 0%, #333 50%, #000 100%);
-            position: relative;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: repeating-linear-gradient(45deg,
-                    transparent,
-                    transparent 2px,
-                    rgba(255, 255, 255, 0.03) 2px,
-                    rgba(255, 255, 255, 0.03) 4px);
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: url('./mypic.jpg') no-repeat;
-            background-size: cover;
-            background-position: center;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            font-weight: bold;
-            color: #000;
-            border: 6px solid #fff;
-            animation: pulse 3s infinite;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
-        }
-
-        .name {
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            position: relative;
-            z-index: 1;
-            letter-spacing: 2px;
-        }
-
-        .title {
-            font-size: 1.4rem;
-            color: #ccc;
-            font-weight: 300;
-            position: relative;
-            z-index: 1;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .section a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .section:nth-child(even) {
-            background: #111;
-        }
-
-        .section:nth-child(odd) {
-            background: #000;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            color: #fff;
-            margin-bottom: 50px;
-            text-align: center;
-            position: relative;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .section-title::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(45deg, #fff, #666);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background: #fff;
-        }
-
-        /* Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .education-item {
-            background: linear-gradient(135deg, #222, #111);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid #333;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .education-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .education-item:hover::before {
-            left: 100%;
-        }
-
-        .education-item:hover {
-            transform: translateY(-10px);
-            border-color: #fff;
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
-            transition: 2s all ease;
-        }
-
-        .education-item h3 {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .education-item p {
-            color: #ccc;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .education-item strong {
-            color: #fff;
-        }
-
-        .education-item ul {
-            color: #bbb;
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-
-        .education-item li {
-            margin-bottom: 8px;
-            font-size: 1.05rem;
-        }
-
-        /* Experience Section */
-        .experience-item {
-            background: linear-gradient(135deg, #333, #111);
-            padding: 50px;
-            border-radius: 20px;
-            border: 3px solid #444;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: repeating-linear-gradient(45deg,
-                    transparent,
-                    transparent 20px,
-                    rgba(255, 255, 255, 0.02) 20px,
-                    rgba(255, 255, 255, 0.02) 40px);
-        }
-
-        .experience-item:hover {
-            transform: scale(1.05);
-            border-color: #fff;
-            box-shadow: 0 25px 50px rgba(255, 255, 255, 0.15);
-        }
-
-        .experience-item h3 {
-            color: #fff;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .experience-item p {
-            color: #ddd;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .skill-category {
-            background: linear-gradient(135deg, #222, #000);
-            padding: 40px;
-            border-radius: 20px;
-            border: 2px solid #333;
-            transition: all 0.4s ease;
-        }
-
-        .skill-category:hover {
-            border-color: #fff;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
-        }
-
-        .skill-category h3 {
-            color: #fff;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            text-align: center;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .skill-item {
-            margin-bottom: 25px;
-        }
-
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            color: #fff;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .skill-bar {
-            height: 12px;
-            background: #333;
-            border-radius: 6px;
-            overflow: hidden;
-            position: relative;
-            border: 1px solid #444;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(45deg, #fff, #888);
-            border-radius: 6px;
-            transition: width 2s ease-out;
-            position: relative;
-        }
-
-        .skill-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% {
-                transform: translateX(-100%);
-            }
-
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .contact-item {
-            background: linear-gradient(135deg, #333, #111);
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            border: 2px solid #444;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-item::before {
-            content: '';
+        .progress-circle::after {
+            content: attr(data-percent);
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
             transform: translate(-50%, -50%);
-            transition: width 0.6s ease, height 0.6s ease;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1f2937; /* Dark gray for text inside circle */
         }
-
-        .contact-item:hover::before {
-            width: 400px;
-            height: 400px;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-10px) scale(1.05);
-            border-color: #fff;
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
-        }
-
-        .contact-item h3 {
-            color: #fff;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .contact-item p {
-            color: #ccc;
-            position: relative;
-            z-index: 1;
-            font-size: 1rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-100px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(100px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
-            }
-
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
-            }
-        }
-
-        /* Scroll animations */
-        .fade-in {
+        
+        /* Custom CSS for Timeline Animation */
+        .timeline-item {
             opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
 
-        .fade-in.visible {
+        .timeline-item.animate-in {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .name {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-
-            .profile-image {
-                width: 150px;
-                height: 150px;
-                font-size: 50px;
-            }
+        /* Utility for Skill Bar Animation */
+        .skill-bar-fill {
+            transition: width 1.5s ease-out;
         }
+    
+        .profile-image {
+            background:url("https://ibb.co/q3T8F7sX");
+            background-size: cover;
+            background-positition: center;
+        }
+
     </style>
 </head>
+<body class="bg-gray-100 p-4 md:p-8">
 
-<body>
-    <div class="background-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+    <!-- CV Container (A4 Range Simulation) -->
+    <div class="max-w-4xl mx-auto shadow-2xl overflow-hidden rounded-xl">
 
-    <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <div class="profile-image"></div>
-            <h1 class="name">Kasun Harshana Premalal</h1>
-            <p class="title">Graphic Designer & Creative Professional</p>
-        </div>
+        <!-- CV Body: Responsive Flex Container -->
+        <!-- On Mobile (default): Sidebar (order-1) on top, Main Content (order-2) on bottom -->
+        <!-- On Desktop (md+): Main Content (md:order-1) on left, Sidebar (md:order-2) on right -->
+        <div class="flex flex-col md:flex-row">
+            
+            <!-- ------------------------------------------------------------------ -->
+            <!-- 1. SIDEBAR COLUMN (Profile, Contact, Social) - Black Theme -->
+            <!-- ------------------------------------------------------------------ -->
+            <div class="w-full md:w-1/3 bg-gray-900 text-white p-6 md:p-8 order-1 md:order-2">
+                
+                <!-- Photo Space -->
+                <div class="flex justify-center mb-6">
+                    <div class="w-32 h-32 rounded-full border-4 border-gray-600 flex items-center justify-center text-sm font-light uppercase tracking-widest overflow-hidden">
+                        <img src="https://i.ibb.co/JwDTFm70/1761414217060-2.jpg" alt="1761414217060-2" border="0">
+                    </div>
+                </div>
 
-        <!-- Education Section -->
-        <div class="section" id="education">
-            <h2 class="section-title fade-in">Education</h2>
+                <!-- Name & Title -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-extrabold tracking-wider uppercase mb-1">KASUN HARSHANA</h1>
+                    <p class="text-lg font-light text-gray-400">JUNIOR GRAPHIC DESIGNER</p>
+                </div>
 
-            <div class="education-grid">
-                <div class="education-item fade-in">
-                    <h3>Advanced Level - Arts Stream</h3>
-                    <p><strong>School:</strong> WP/Hr/Polegoda M. V.</p>
-                    <p><strong>Expected Graduation:</strong> December 2025</p>
-                    <p><strong>Subjects:</strong></p>
-                    <ul>
-                        <li>Communication and Media Studies</li>
-                        <li>Music</li>
-                        <li>Geography</li>
+                <!-- Profile -->
+                <div class="mb-8">
+                    <h2 class="text-xl font-semibold border-b border-gray-600 pb-2 mb-4 tracking-wider">PROFILE</h2>
+                    <p class="text-sm font-light leading-relaxed text-gray-300">
+                        A highly creative and dedicated Junior Graphic Designer with a foundation in visual communication and proficiency in Adobe Creative Suite (Photoshop, Illustrator, Lightroom). Passionate about crafting compelling visual stories and transforming ideas into stunning, effective designs. Eager to contribute fresh perspectives and technical execution to a dynamic design team, with a focus on continuous learning and project-based success.
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="mb-8">
+                    <h2 class="text-xl font-semibold border-b border-gray-600 pb-2 mb-4 tracking-wider">CONTACT</h2>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 w-5 text-gray-400"></i>
+                            <a href="tel:+94724229837" class="hover:text-amber-400 transition">+94 72 422 9837</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-alt mr-3 w-5 text-gray-400"></i>
+                            <a href="tel:+94720437397" class="hover:text-amber-400 transition">+94 72 043 7397</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 w-5 text-gray-400"></i>
+                            <a href="mailto:kasunh375@gmail.com" class="hover:text-amber-400 transition">kasunh375@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 w-5 text-gray-400 mt-1"></i>
+                            <span class="text-gray-300">249/1, Gamagewatta, Mahagama.</span>
+                        </li>
                     </ul>
-                    <p><strong>Positions Held:</strong> D.Head Prefect, Chairman of Media Associations of PMV</p>
                 </div>
 
-                <div class="education-item fade-in">
-                    <h3>Certificate in Graphic Design</h3>
-                    <p><strong>Institute:</strong> Vocational Training Center - Dehivala (NYSC)</p>
-                    <p><strong>Graduated:</strong> March 2024</p>
-                    <p><strong>Skills Acquired:</strong> Adobe Illustrator, Adobe Photoshop, CorelDraw, etc.</p>
+                <!-- Social Media -->
+                <div>
+                    <h2 class="text-xl font-semibold border-b border-gray-600 pb-2 mb-4 tracking-wider">SOCIAL MEDIA</h2>
+                    <ul class="space-y-3 text-sm">
+                        <!-- WhatsApp -->
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 w-5 text-gray-400"></i>
+                            <a href="https://wa.me/94755982430" target="_blank" class="hover:text-amber-400 transition">+94 75 598 2430</a>
+                        </li>
+                        <!-- Instagram -->
+                        <li class="flex items-center">
+                            <i class="fab fa-instagram mr-3 w-5 text-gray-400"></i>
+                            <a href="https://instagram.com/this._harsh" target="_blank" class="hover:text-amber-400 transition">@this._harsh</a>
+                        </li>
+                        <!-- Facebook -->
+                        <li class="flex items-center">
+                            <i class="fab fa-facebook-f mr-3 w-5 text-gray-400"></i>
+                            <a href="https://facebook.com/thiz.harsh" target="_blank" class="hover:text-amber-400 transition">@thiz.harsh</a>
+                        </li>
+                        <!-- X (Twitter) -->
+                        <li class="flex items-center">
+                            <i class="fab fa-twitter mr-3 w-5 text-gray-400"></i>
+                            <a href="https://x.com/this_harsh" target="_blank" class="hover:text-amber-400 transition">@this_harsh</a>
+                        </li>
+                        <!-- Threads -->
+                        <li class="flex items-center">
+                            <i class="fab fa-brands fa-threads mr-3 w-5 text-gray-400"></i>
+                            <a href="https://threads.net/@thiz._harsh" target="_blank" class="hover:text-amber-400 transition">@thiz._harsh</a>
+                        </li>
+                        <!-- GitHub -->
+                        <li class="flex items-center">
+                            <i class="fab fa-github mr-3 w-5 text-gray-400"></i>
+                            <a href="https://github.com/hashinfinite" target="_blank" class="hover:text-amber-400 transition">@hashinfinite</a>
+                        </li>
+                        <!-- Discord -->
+                        <li class="flex items-center">
+                            <i class="fab fa-discord mr-3 w-5 text-gray-400"></i>
+                            <!-- Discord links are usually profile links or tag-based, using a generic link here -->
+                            <span class="text-gray-300">this._harsh</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="education-item fade-in">
-                    <h3>Certificate in MS Office</h3>
-                    <p><strong>Institute:</strong> IT Hub Computer School</p>
-                    <p><strong>Graduated:</strong> February 2023</p>
-                </div>
-
-                <div class="education-item fade-in">
-                    <h3>Certificate in MS Office (Basic)</h3>
-                    <p><strong>Institute:</strong> Nanasala | Public Library - Mahagama</p>
-                    <p><strong>Graduated:</strong> March 2020</p>
-                </div>
             </div>
-        </div>
 
-        <!-- Experience Section -->
-        <div class="section" id="experience">
-            <h2 class="section-title fade-in">Professional Experience</h2>
-
-            <div class="experience-item fade-in">
-                <h3>HASH iNfinite Studios</h3>
-                <p><strong>Position:</strong> Founder and Graphic Designer</p>
-                <p><strong>Description:</strong> Leading creative design projects and managing studio operations</p>
-                <p><strong>Portfolio:</strong> <a style="text-decoration: underline; color: #fff;"
-                        href="https://harshana101.github.io/HASH_iNfinite/">HASH iNfinite Studios</a></p>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="section" id="skills">
-            <h2 class="section-title fade-in">Skills</h2>
-
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3>Design Skills</h3>
-
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Adobe Illustrator</span>
-                            <span>90%</span>
+            <!-- ------------------------------------------------------------------ -->
+            <!-- 2. MAIN CONTENT COLUMN (Skills, Education, Projects) - White Theme -->
+            <!-- ------------------------------------------------------------------ -->
+            <div class="w-full md:w-2/3 bg-white text-gray-800 p-6 md:p-8 order-2 md:order-1">
+                
+                <!-- Skills (Graphic Design) -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-800 pb-2 mb-6 tracking-wide">DESIGN SKILLS</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                        
+                        <!-- Skill Item (Photoshop) -->
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle text-black mb-2" data-percent="60%" data-skill-val="60" data-color="#1f2937" id="ps-circle">
+                                <div class="absolute w-16 h-16 bg-white rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-layer-group text-2xl text-gray-800"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-semibold mt-1">Photoshop</p>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90%"></div>
+
+                        <!-- Skill Item (Illustrator) -->
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle text-black mb-2" data-percent="70%" data-skill-val="70" data-color="#1f2937" id="ai-circle">
+                                <div class="absolute w-16 h-16 bg-white rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-pen-nib text-2xl text-gray-800"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-semibold mt-1">Illustrator</p>
+                        </div>
+
+                        <!-- Skill Item (Lightroom) -->
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle text-black mb-2" data-percent="65%" data-skill-val="65" data-color="#1f2937" id="lr-circle">
+                                <div class="absolute w-16 h-16 bg-white rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-lightbulb text-2xl text-gray-800"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-semibold mt-1">Lightroom</p>
+                        </div>
+
+                        <!-- Skill Item (Coreldraw) -->
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle text-black mb-2" data-percent="40%" data-skill-val="40" data-color="#1f2937" id="cd-circle">
+                                <div class="absolute w-16 h-16 bg-white rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-bezier-curve text-2xl text-gray-800"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-semibold mt-1">Coreldraw</p>
+                        </div>
+
+                        <!-- Skill Item (InDesign) -->
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle text-black mb-2" data-percent="30%" data-skill-val="30" data-color="#1f2937" id="id-circle">
+                                <div class="absolute w-16 h-16 bg-white rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-book-open text-2xl text-gray-800"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-semibold mt-1">InDesign</p>
+                        </div>
+                        
+                        <!-- Skill Item (Premier Pro) -->
+                        <div class="flex flex-col items-center">
+                            <div class="progress-circle text-black mb-2" data-percent="35%" data-skill-val="35" data-color="#1f2937" id="pp-circle">
+                                <div class="absolute w-16 h-16 bg-white rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-gray-100 flex items-center justify-center">
+                                    <i class="fas fa-video text-2xl text-gray-800"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-semibold mt-1">Premier Pro</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Extra Skills (Tech) -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-800 pb-2 mb-6 tracking-wide">EXTRA SKILLS (WEB)</h2>
+                    
+                    <!-- HTML -->
+                    <div class="mb-4">
+                        <p class="text-sm font-medium mb-1 flex justify-between">
+                            <span>HTML</span>
+                            <span>40%</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar-fill bg-gray-800 h-2.5 rounded-full" id="html-bar" style="width: 0%"></div>
                         </div>
                     </div>
 
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Adobe Photoshop</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>CorelDraw</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80%"></div>
+                    <!-- CSS -->
+                    <div class="mb-4">
+                        <p class="text-sm font-medium mb-1 flex justify-between">
+                            <span>CSS</span>
+                            <span>35%</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar-fill bg-gray-800 h-2.5 rounded-full" id="css-bar" style="width: 0%"></div>
                         </div>
                     </div>
 
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>UX/UI Design</span>
-                            <span>65%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="65%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Adobe Premiere Pro</span>
-                            <span>30%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="30%"></div>
+                    <!-- JS -->
+                    <div class="mb-4">
+                        <p class="text-sm font-medium mb-1 flex justify-between">
+                            <span>JavaScript</span>
+                            <span>10%</span>
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="skill-bar-fill bg-gray-800 h-2.5 rounded-full" id="js-bar" style="width: 0%"></div>
                         </div>
                     </div>
+                </section>
 
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Adobe Audition</span>
-                            <span>20%</span>
+
+                <!-- Education (Timeline) -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-800 pb-2 mb-6 tracking-wide">EDUCATION</h2>
+                    
+                    <div class="relative pl-4">
+                        <!-- Vertical Line -->
+                        <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+
+                        <!-- 2025: Advance Level -->
+                        <div class="timeline-item mb-8 relative" data-year="2025">
+                            <div class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-white"></div>
+                            <p class="text-xs font-light text-gray-500 mb-1">2025</p>
+                            <h3 class="text-lg font-semibold text-gray-900">G.C.E. Advance Level</h3>
+                            <p class="text-sm text-gray-700">WP/Ho/Polegoda M. V. (Subjects: Media, Geography, Eastern Music)</p>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="20%"></div>
+
+                        <!-- 2024: Certificate Course in Graphic Design -->
+                        <div class="timeline-item mb-8 relative" data-year="2024">
+                            <div class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-white"></div>
+                            <p class="text-xs font-light text-gray-500 mb-1">2024</p>
+                            <h3 class="text-lg font-semibold text-gray-900">Certificate Course in Graphic Design (2nd Batch)</h3>
+                            <p class="text-sm text-gray-700">VTC Dehiwala - NYSC</p>
+                        </div>
+
+                        <!-- 2023: Certificate Course in MS Office -->
+                        <div class="timeline-item mb-8 relative" data-year="2023">
+                            <div class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-white"></div>
+                            <p class="text-xs font-light text-gray-500 mb-1">2023</p>
+                            <h3 class="text-lg font-semibold text-gray-900">Certificate Course in MS Office</h3>
+                            <p class="text-sm text-gray-700">IT Hub Institute</p>
+                        </div>
+
+                        <!-- 2021: Ordinary Level -->
+                        <div class="timeline-item mb-8 relative" data-year="2021">
+                            <div class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-white"></div>
+                            <p class="text-xs font-light text-gray-500 mb-1">2021</p>
+                            <h3 class="text-lg font-semibold text-gray-900">G.C.E. Ordinary Level (Started 2011)</h3>
+                            <p class="text-sm text-gray-700">WP/Ho/Polegoda M. V.</p>
+                        </div>
+
+                        <!-- 2020: Certificate Course in MS Office (Basic) -->
+                        <div class="timeline-item relative" data-year="2020">
+                            <div class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-gray-800 border-2 border-white"></div>
+                            <p class="text-xs font-light text-gray-500 mb-1">2020</p>
+                            <h3 class="text-lg font-semibold text-gray-900">Certificate Course in MS Office (Basic)</h3>
+                            <p class="text-sm text-gray-700">E-Nenasala, Public Library - Mahagama</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section>
+                    <h2 class="text-2xl font-bold border-b-2 border-gray-800 pb-2 mb-6 tracking-wide">PROJECTS</h2>
+                    
+                    <div class="relative pl-4">
+                        <!-- Project Item -->
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Creation of the Polegoda Maha Vidyalaya Website</h3>
+                            <p class="text-sm text-gray-700 mb-2">Designed and implemented the school's online presence, utilizing fundamental web development skills.</p>
+                            <a href="https://pmvmu.github.io/Polegodamv.lk" target="_blank" class="text-sm text-blue-600 hover:text-blue-800 font-medium transition flex items-center">
+                                View Project <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="skill-category fade-in">
-                    <h3>Technical Skills</h3>
-
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Music</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Photography</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Web Development</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="60%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="section" id="contact">
-            <h2 class="section-title fade-in">Contact</h2>
-
-            <div class="contact-grid">
-                <a href="https://www.instagram.com/thiz._harsh?igsh=NjE3ZGdibHo4M2pz">
-                    <div class="contact-item fade-in">
-                        <h3>Instagram</h3>
-                        <p>Follow me on Instagram</p>
-                    </div>
-                </a>
-
-                <a href="https://www.facebook.com/mr.preeme1">
-                    <div class="contact-item fade-in">
-                        <h3>Facebook</h3>
-                        <p>Connect on Facebook</p>
-                    </div>
-                </a>
-
-                <a href="https://wa.me/+94755982430">
-                    <div class="contact-item fade-in">
-                        <h3>WhatsApp</h3>
-                        <p>Message me directly</p>
-                    </div>
-                </a>
-
-                <a href="https://www.tiktok.com/@preem.e">
-                    <div class="contact-item fade-in">
-                        <h3>TikTok</h3>
-                        <p>Creative content</p>
-                    </div>
-                </a>
-
-                <a href="https://www.threads.net/@thiz._harsh">
-                    <div class="contact-item fade-in">
-                        <h3>Threads</h3>
-                        <p>Join the conversation</p>
-                    </div>
-                </a>
-
-                <a href="mailto:kasunh375@gmail.com">
-                    <div class="contact-item fade-in">
-                        <h3>Email</h3>
-                        <p>Contact me via email</p>
-                    </div>
-                </a>
-
-                <a href="https://harshana101.github.io/HASH_iNfinite/">
-                    <div class="contact-item fade-in">
-                        <h3>Website</h3>
-                        <p>Visit Our Official website</p>
-                    </div>
-                </a>
             </div>
         </div>
     </div>
 
     <script>
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        // --- ANIMATION LOGIC ---
+
+        const skillData = [
+            { id: 'ps-circle', value: 60 },
+            { id: 'ai-circle', value: 70 },
+            { id: 'cd-circle', value: 40 },
+            { id: 'id-circle', value: 30 },
+            { id: 'lr-circle', value: 65 },
+            { id: 'pp-circle', value: 35 },
+        ];
+
+        const barData = [
+            { id: 'html-bar', value: 40 },
+            { id: 'css-bar', value: 35 },
+            { id: 'js-bar', value: 10 },
+        ];
+        
+        // Function to animate circular progress bar
+        function animateCircle(element, percentage, color) {
+            // Apply the conic-gradient to create the fill effect
+            element.style.background = `conic-gradient(${color} ${percentage}%, #e0e0e0 ${percentage}% 100%)`;
+        }
+
+        // Function to animate linear progress bar
+        function animateBar(element, percentage) {
+            element.style.width = `${percentage}%`;
+        }
+
+        // Function to animate timeline items sequentially
+        function animateTimeline() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate-in');
+                }, index * 200); // Staggered delay for effect
+            });
+        }
+
+        function runAnimations() {
+            // 1. Animate Circular Skills
+            skillData.forEach(skill => {
+                const element = document.getElementById(skill.id);
+                if (element) {
+                    const color = element.getAttribute('data-color') || '#1f2937';
+                    animateCircle(element, skill.value, color);
+                }
+            });
+
+            // 2. Animate Linear Skills (Extra Skills)
+            barData.forEach(skill => {
+                const element = document.getElementById(skill.id);
+                if (element) {
+                    animateBar(element, skill.value);
+                }
+            });
+
+            // 3. Animate Education Timeline
+            animateTimeline();
+        }
+
+        // Run animations once the entire page is loaded
+        window.onload = function() {
+            runAnimations();
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Animate skill bars when they come into view
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillBars = entry.target.querySelectorAll('.skill-progress');
-                    skillBars.forEach(bar => {
-                        const width = bar.getAttribute('data-width');
-                        setTimeout(() => {
-                            bar.style.width = width;
-                        }, 300);
-                    });
-                }
-            });
-        }, observerOptions);
-
-        // Observe skill sections
-        document.querySelectorAll('.skill-category').forEach(el => {
-            skillObserver.observe(el);
-        });
-
-        // Initialize skill bars
-        document.querySelectorAll('.skill-progress').forEach(bar => {
-            bar.style.width = '0%';
-        });
     </script>
 </body>
-
 </html>
